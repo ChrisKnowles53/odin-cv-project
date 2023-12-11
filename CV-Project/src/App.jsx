@@ -4,14 +4,22 @@ import Education from "./components/Education";
 import "./App.css";
 import WorkExperience from "./components/WorkExperience";
 
+// add a function to reset the whole form
+
 function App() {
   return (
-    <div className="main-contianer">
+    <div className="mainContainer">
       <h1>CJK's CV Webpage</h1>
-      <h2>Created using Vite, React and Javascript</h2>
-      <GeneralInformation section="General Information" />
-      <Education section="Education" />
-      <WorkExperience section="Work Experience" />
+      <div className="content">
+        <div className="section">
+          <GeneralInformation section="General Information" />
+          <Education section="Education" />
+          <WorkExperience section="Work Experience" />
+        </div>
+        <div className="section">
+          <h2>Section to display in a format that i like</h2>
+        </div>
+      </div>
     </div>
   );
 }

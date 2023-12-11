@@ -19,6 +19,13 @@ export default function WorkExperience({ section }) {
     { key: "dateTo", label: "Date To" },
   ];
 
+  const handleInputChange = (key, value) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [key]: value,
+    }));
+  };
+
   return (
     <div className={section}>
       <h2>{section}</h2>
@@ -27,6 +34,7 @@ export default function WorkExperience({ section }) {
           key={field.key}
           name={formData[field.key]}
           label={field.label}
+          onChange={(event) => handleInputChange(field.key, event.target.value)}
         />
       ))}
     </div>

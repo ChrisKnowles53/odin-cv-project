@@ -12,12 +12,12 @@ export default function InputField({ name, label }) {
       <label className="inputLabel" htmlFor="html">
         {label}
       </label>
-      <input
+      <textarea
         className="input"
         placeholder={name}
         value={input}
         onChange={handleChange}
-      />
+      ></textarea>
       <h2>{input}</h2>
     </>
   );

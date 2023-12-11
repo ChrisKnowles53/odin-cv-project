@@ -10,7 +10,7 @@ export default function GeneralInformation({ section }) {
   return (
     <div className={section}>
       <h2>{section}</h2>
-      <InputField name={firstName} label="FirstName" />
+      <InputField name={firstName} label="First Name" />
       <InputField name={surname} label="Surname" />
       <InputField name={email} label="email" />
       <InputField name={phoneNumber} label="Phone Number" />
