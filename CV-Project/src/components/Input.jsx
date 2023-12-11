@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function InputField({ name }) {
+export default function InputField({ name, label }) {
   const [input, setInput] = useState("");
 
   function handleChange(event) {
@@ -10,16 +10,15 @@ export default function InputField({ name }) {
   return (
     <>
       <label className="inputLabel" htmlFor="html">
-        {name}
+        {label}
       </label>
       <input
         className="input"
-        label={name}
         placeholder={name}
         value={input}
         onChange={handleChange}
       />
-      <h2>hi {input}</h2>
+      <h2>{input}</h2>
     </>
   );
 }
