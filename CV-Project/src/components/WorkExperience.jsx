@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputField from "./Input";
+import Button from "./Button";
 
 export default function WorkExperience({ section }) {
   const [formData, setFormData] = useState({
@@ -26,6 +27,10 @@ export default function WorkExperience({ section }) {
     }));
   };
 
+  function handleClick() {
+    // do something with the click
+  }
+
   return (
     <div className={section}>
       <h2>{section}</h2>
@@ -37,6 +42,8 @@ export default function WorkExperience({ section }) {
           onChange={(event) => handleInputChange(field.key, event.target.value)}
         />
       ))}
+      <Button text="Save" handleClick={handleClick} />
+      <Button text="Edit" />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-11T15:15:06.893Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="sV3c_f8HVLwswP5IRoKc" version="22.1.7" type="device">
+<mxfile host="app.diagrams.net" modified="2023-12-11T15:39:34.426Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="ykP1seEoZN_B3WwcpXkn" version="22.1.7" type="device">
   <diagram name="Page-1" id="v8D3dec0jV0c4B8lEs-R">
     <mxGraphModel dx="943" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -25,8 +25,8 @@
         <mxCell id="4ZSdloqYiCIsZU4gAhAX-9" value="State: think about edit function" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="230" y="140" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="4ZSdloqYiCIsZU4gAhAX-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="80" width="120" height="60" as="geometry" />
+        <mxCell id="4ZSdloqYiCIsZU4gAhAX-12" value="Need to make each button do different things&lt;br&gt;when save clicked update the CV display and clear the input fields&lt;br&gt;&lt;br&gt;when edit pressed populate the input fields and live update the display" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="80" width="210" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
