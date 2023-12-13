@@ -19,6 +19,18 @@ function App() {
         </div>
         <div className="section">
           <h2>Section to display in a format that i like</h2>
+          <div className="displayGeneralInformation">
+            <h2>General Information</h2>
+            <p className="generalDetails"></p>
+          </div>
+          <div className="displayEducation">
+            <h2>Education</h2>
+            <p className="educationDetails"></p>
+          </div>
+          <div className="displayWorkExperience">
+            <h2>Work Experience</h2>
+            <p className="workExperienceDetails"></p>
+          </div>
         </div>
       </div>
     </div>

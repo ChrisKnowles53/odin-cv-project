@@ -3,6 +3,7 @@
 import { useState } from "react";
 import InputField from "./Input";
 import Button from "./Button";
+import DateInputField from "../DateInput";
 
 export default function Education({ section }) {
   const [schoolName, setSchoolName] = useState("School Name");
@@ -18,7 +19,7 @@ export default function Education({ section }) {
       <h2>{section}</h2>
       <InputField name={schoolName} label="School Name" />
       <InputField name={subjectStudied} label="Subject" />
-      <InputField name={graduationDate} label="Graduation Date" />
+      <DateInputField name={graduationDate} label="Graduation Date" />
       <Button text="Save" handleClick={handleClick} />
       <Button text="Edit" />
     </div>

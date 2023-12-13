@@ -12,6 +12,7 @@ export default function GeneralInformation({ section }) {
 
   function handleClick() {
     // code for what to do when edit clicked
+    // when save clicked i want to update the <p displayContent> within <div displayGenInfo>
   }
 
   return (
