@@ -14,6 +14,7 @@ export default function GeneralInformation({
   setEmail,
   phoneNumber,
   setPhoneNumber,
+  handleSave,
 }) {
   return (
     <div className={section}>
@@ -30,7 +31,7 @@ export default function GeneralInformation({
         label="Phone Number"
       />
       <br />
-      <Button text="Save" />
+      <Button text="Save" handleSave={handleSave} />
       <Button text="Edit" />
     </div>
   );

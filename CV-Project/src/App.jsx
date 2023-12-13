@@ -12,6 +12,18 @@ function App() {
   const [email, setEmail] = useState("Enter your email");
   const [phoneNumber, setPhoneNumber] = useState("Enter phone number");
 
+  const [savedFirstName, setSavedFirstName] = useState("");
+  const [savedSurname, setSavedSurname] = useState("");
+  const [savedEmail, setSavedEmail] = useState("");
+  const [savedPhoneNumber, setSavedPhoneNumber] = useState("");
+
+  const handleSave = () => {
+    setSavedFirstName(firstName);
+    setSavedSurname(surname);
+    setSavedEmail(email);
+    setSavedPhoneNumber(phoneNumber);
+  };
+
   return (
     <div className="mainContainer">
       <h1>CJK CV Webpage</h1>
@@ -27,6 +39,7 @@ function App() {
             setEmail={setEmail}
             phoneNumber={phoneNumber}
             setPhoneNumber={setPhoneNumber}
+            handleSave={handleSave}
           />
           <hr />
           <Education section="Education" />
@@ -38,7 +51,7 @@ function App() {
           <div className="displayGeneralInformation">
             <h2>General Information</h2>
             <p className="generalDetails">
-              {firstName} {surname} {email} {phoneNumber}
+              {savedFirstName} {savedSurname} {savedEmail} {savedPhoneNumber}
             </p>
           </div>
           <div className="displayEducation">
