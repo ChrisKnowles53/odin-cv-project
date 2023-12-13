@@ -25,9 +25,10 @@ h2 {
   flex-direction: column;
 }
 
-.section {
+.inputSection {
   flex: 1;
-  text-align: left;
+  text-align: right;
+  margin-right: 20px;
 }
 
 .content {

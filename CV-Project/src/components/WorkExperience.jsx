@@ -3,6 +3,7 @@ import { useState } from "react";
 import InputField from "./Input";
 import Button from "./Button";
 import DateInputField from "../DateInput";
+import React from "react";
 
 export default function WorkExperience({ section }) {
   const [formData, setFormData] = useState({
@@ -37,14 +38,20 @@ export default function WorkExperience({ section }) {
     <div className={section}>
       <h2>{section}</h2>
       {inputFields.map((field) => (
-        <InputField
-          key={field.key}
-          name={formData[field.key]}
-          label={field.label}
-          onChange={(event) => handleInputChange(field.key, event.target.value)}
-        />
+        <React.Fragment key={field.key}>
+          <InputField
+            name={formData[field.key]}
+            label={field.label}
+            onChange={(event) =>
+              handleInputChange(field.key, event.target.value)
+            }
+          />
+          <br />
+        </React.Fragment>
       ))}
+
       <DateInputField label="Date from" />
+      <br />
       <DateInputField label="Date to" />
       <Button text="Save" handleClick={handleClick} />
       <Button text="Edit" />

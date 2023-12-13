@@ -4,25 +4,33 @@ import { useState } from "react";
 import InputField from "./Input";
 import Button from "./Button";
 
-export default function GeneralInformation({ section }) {
-  const [firstName, setFirstName] = useState("Enter your first name");
-  const [surname, setSurname] = useState("Enter your surname");
-  const [email, setEmail] = useState("Enter your email");
-  const [phoneNumber, setPhoneNumber] = useState("Enter phone number");
-
-  function handleClick() {
-    // code for what to do when edit clicked
-    // when save clicked i want to update the <p displayContent> within <div displayGenInfo>
-  }
-
+export default function GeneralInformation({
+  section,
+  firstName,
+  setFirstName,
+  surname,
+  setSurname,
+  email,
+  setEmail,
+  phoneNumber,
+  setPhoneNumber,
+}) {
   return (
     <div className={section}>
       <h2>{section}</h2>
-      <InputField name={firstName} label="First Name" />
-      <InputField name={surname} label="Surname" />
-      <InputField name={email} label="email" />
-      <InputField name={phoneNumber} label="Phone Number" />
-      <Button text="Save" handleClick={handleClick} />
+      <InputField name={firstName} setName={setFirstName} label="First Name" />
+      <br />
+      <InputField name={surname} setName={setSurname} label="Surname" />
+      <br />
+      <InputField name={email} setName={setEmail} label="email" />
+      <br />
+      <InputField
+        name={phoneNumber}
+        setName={setPhoneNumber}
+        label="Phone Number"
+      />
+      <br />
+      <Button text="Save" />
       <Button text="Edit" />
     </div>
   );

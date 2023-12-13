@@ -18,8 +18,11 @@ export default function Education({ section }) {
     <div className={section}>
       <h2>{section}</h2>
       <InputField name={schoolName} label="School Name" />
+      <br />
       <InputField name={subjectStudied} label="Subject" />
+      <br />
       <DateInputField name={graduationDate} label="Graduation Date" />
+      <br />
       <Button text="Save" handleClick={handleClick} />
       <Button text="Edit" />
     </div>
