@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import InputField from "./Input";
 import Button from "./Button";

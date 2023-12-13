@@ -3,14 +3,12 @@ import GeneralInformation from "./components/GeneralInformation";
 import Education from "./components/Education";
 import "./App.css";
 import WorkExperience from "./components/WorkExperience";
-import Button from "./components/Button";
-
 // add a function to reset the whole form
 
 function App() {
   return (
     <div className="mainContainer">
-      <h1>CJK's CV Webpage</h1>
+      <h1>CJK CV Webpage</h1>
       <div className="content">
         <div className="section">
           <GeneralInformation section="General Information" />
