@@ -1,13 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
-export default function DateInputField({ label }) {
-  const [dateInput, setDateInput] = useState("");
-
-  function handleChange(event) {
-    setDateInput(event.target.value);
-  }
-
+export default function DateInputField({ label, graduationDate, setName }) {
   return (
     <>
       <label className="inputLabel" htmlFor="html">
@@ -16,10 +10,10 @@ export default function DateInputField({ label }) {
       <input
         className="input"
         type="date"
-        value={dateInput}
-        onChange={handleChange}
+        value={graduationDate}
+        onChange={(event) => setName(event.target.value)}
       ></input>
-      <h2>{dateInput}</h2>
+      <h2>{graduationDate}</h2>
     </>
   );
 }
