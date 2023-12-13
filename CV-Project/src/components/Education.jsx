@@ -5,26 +5,36 @@ import InputField from "./Input";
 import Button from "./Button";
 import DateInputField from "../DateInput";
 
-export default function Education({ section }) {
-  const [schoolName, setSchoolName] = useState("School Name");
-  const [subjectStudied, setSubjectStudied] = useState("Subject Studied");
-  const [graduationDate, setGraduationDate] = useState("Graduation Date");
-
-  function handleClick() {
-    //do somethign with handle click
-  }
-
+export default function Education({
+  section,
+  schoolName,
+  subjectStudied,
+  graduationDate,
+  setSchoolName,
+  setSubjectStudied,
+  setGraduationDate,
+}) {
   return (
     <div className={section}>
       <h2>{section}</h2>
-      <InputField name={schoolName} label="School Name" />
+      <InputField
+        name={schoolName}
+        setName={setSchoolName}
+        label="School Name"
+      />
       <br />
-      <InputField name={subjectStudied} label="Subject" />
+      <InputField
+        name={subjectStudied}
+        setName={setSubjectStudied}
+        label="Subject"
+      />
       <br />
-      <DateInputField name={graduationDate} label="Graduation Date" />
+      <DateInputField
+        name={graduationDate}
+        setName={setGraduationDate}
+        label="Graduation Date"
+      />
       <br />
-      <Button text="Save" handleClick={handleClick} />
-      <Button text="Edit" />
     </div>
   );
 }

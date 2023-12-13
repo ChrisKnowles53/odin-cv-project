@@ -4,6 +4,7 @@ import Education from "./components/Education";
 import "./App.css";
 import WorkExperience from "./components/WorkExperience";
 import { useState } from "react";
+import Button from "./components/Button";
 // add a function to reset the whole form
 
 function App() {
@@ -17,16 +18,29 @@ function App() {
   const [savedEmail, setSavedEmail] = useState("");
   const [savedPhoneNumber, setSavedPhoneNumber] = useState("");
 
+  const [schoolName, setSchoolName] = useState("School Name");
+  const [subjectStudied, setSubjectStudied] = useState("Subject Studied");
+  const [graduationDate, setGraduationDate] = useState("Graduation Date");
+
+  const [savedSchoolName, setSavedSchoolName] = useState("");
+  const [savedSubjectStudied, setSavedSubjectStudied] = useState("");
+  const [savedGraduationDate, setSavedGraduationDate] = useState("");
+
   const handleSave = () => {
     setSavedFirstName(firstName);
     setSavedSurname(surname);
     setSavedEmail(email);
     setSavedPhoneNumber(phoneNumber);
+    setSavedSchoolName(schoolName);
+    setSavedSubjectStudied(subjectStudied);
+    setSavedGraduationDate(graduationDate);
   };
 
   return (
     <div className="mainContainer">
       <h1>CJK CV Webpage</h1>
+      <Button text="Save" handleSave={handleSave} />
+      <Button text="Edit" />
       <div className="content">
         <div className="inputSection">
           <GeneralInformation
@@ -42,7 +56,15 @@ function App() {
             handleSave={handleSave}
           />
           <hr />
-          <Education section="Education" />
+          <Education
+            section="Education"
+            schoolName={schoolName}
+            subjectStudied={subjectStudied}
+            graduationDate={graduationDate}
+            setSchoolName={setSchoolName}
+            setSubjectStudied={setSubjectStudied}
+            setGraduationDate={setGraduationDate}
+          />
           <hr />
           <WorkExperience section="Work Experience" />
         </div>
@@ -56,7 +78,10 @@ function App() {
           </div>
           <div className="displayEducation">
             <h2>Education</h2>
-            <p className="educationDetails"></p>
+            <p className="educationDetails">
+              {savedSchoolName} {savedSubjectStudied}
+              {savedGraduationDate}
+            </p>
           </div>
           <div className="displayWorkExperience">
             <h2>Work Experience</h2>
