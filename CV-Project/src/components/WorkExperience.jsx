@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InputField from "./Input";
 import Button from "./Button";
+import DateInputField from "../DateInput";
 
 export default function WorkExperience({ section }) {
   const [formData, setFormData] = useState({
@@ -8,16 +9,16 @@ export default function WorkExperience({ section }) {
     position: "Enter position",
     title: "Enter title",
     mainResponsibilities: "Enter main responsibilities",
-    dateFrom: "Enter start date",
-    dateTo: "Enter end date",
+    // dateFrom: "Enter start date",
+    // dateTo: "Enter end date",
   });
   const inputFields = [
     { key: "companyName", label: "Company Name" },
     { key: "position", label: "Position" },
     { key: "title", label: "Title" },
     { key: "mainResponsibilities", label: "Main Responsibilities" },
-    { key: "dateFrom", label: "Date From" },
-    { key: "dateTo", label: "Date To" },
+    // { key: "dateFrom", label: "Date From" },
+    // { key: "dateTo", label: "Date To" },
   ];
 
   const handleInputChange = (key, value) => {
@@ -42,6 +43,8 @@ export default function WorkExperience({ section }) {
           onChange={(event) => handleInputChange(field.key, event.target.value)}
         />
       ))}
+      <DateInputField label="Date from" />
+      <DateInputField label="Date to" />
       <Button text="Save" handleClick={handleClick} />
       <Button text="Edit" />
     </div>
