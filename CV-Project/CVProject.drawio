@@ -1,32 +1,23 @@
-<mxfile host="app.diagrams.net" modified="2023-12-11T15:39:34.426Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="ykP1seEoZN_B3WwcpXkn" version="22.1.7" type="device">
+<mxfile host="app.diagrams.net" modified="2023-12-13T15:38:36.465Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="1yGPdd5BODTtGks5pCPj" version="22.1.7" type="device">
   <diagram name="Page-1" id="v8D3dec0jV0c4B8lEs-R">
-    <mxGraphModel dx="943" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="960" dy="555" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="4ZSdloqYiCIsZU4gAhAX-1" value="APP.js&lt;br&gt;&lt;br&gt;Render:&lt;br&gt;General Info&lt;br&gt;Education&lt;br&gt;Practical Experience" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="30" width="210" height="100" as="geometry" />
+        <mxCell id="4ZSdloqYiCIsZU4gAhAX-1" value="APP.js&lt;br&gt;&lt;br&gt;Render:&lt;br&gt;General Info&lt;br&gt;Education&lt;br&gt;Practical Experience&lt;br&gt;Edit Button&lt;br&gt;Save Button" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="309" y="70" width="210" height="130" as="geometry" />
         </mxCell>
         <mxCell id="4ZSdloqYiCIsZU4gAhAX-2" value="Education&lt;br&gt;&lt;br&gt;Variables:&lt;br&gt;School Name&lt;br&gt;Title of Study&lt;br&gt;Date of Study&lt;br&gt;&lt;br&gt;Render:&lt;br&gt;Input boxes&lt;br&gt;Edit Button&lt;br&gt;Save Button" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="491" y="270" width="120" height="180" as="geometry" />
+          <mxGeometry x="331" y="284" width="120" height="180" as="geometry" />
         </mxCell>
         <mxCell id="4ZSdloqYiCIsZU4gAhAX-3" value="Practical Experience&lt;br&gt;&lt;br&gt;Variables:&lt;br&gt;Company Name&lt;br&gt;Position Title&lt;br&gt;Main Responsibilities&lt;br&gt;Date From&lt;br&gt;Date to&lt;br&gt;&lt;br&gt;Render:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Input boxes&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Edit Button&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Save Button" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="650" y="270" width="160" height="240" as="geometry" />
+          <mxGeometry x="490" y="284" width="160" height="240" as="geometry" />
         </mxCell>
         <mxCell id="4ZSdloqYiCIsZU4gAhAX-4" value="General Information&lt;br&gt;&lt;br&gt;Variables:&lt;br&gt;Name&lt;br&gt;Email&lt;br&gt;Phone&lt;br&gt;&lt;br&gt;Render:&lt;br&gt;Input Boxes&lt;br&gt;Edit Button&lt;br&gt;Save Button" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="329" y="270" width="130" height="180" as="geometry" />
-        </mxCell>
-        <mxCell id="4ZSdloqYiCIsZU4gAhAX-7" value="Edit Button&lt;br&gt;&lt;br&gt;when clicked fill in the form with the stored values" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="56" y="280" width="140" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="4ZSdloqYiCIsZU4gAhAX-8" value="Save Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="206" y="315" width="90" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="4ZSdloqYiCIsZU4gAhAX-9" value="State: think about edit function" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="140" width="160" height="100" as="geometry" />
+          <mxGeometry x="169" y="284" width="130" height="180" as="geometry" />
         </mxCell>
         <mxCell id="4ZSdloqYiCIsZU4gAhAX-12" value="Need to make each button do different things&lt;br&gt;when save clicked update the CV display and clear the input fields&lt;br&gt;&lt;br&gt;when edit pressed populate the input fields and live update the display" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="80" width="210" height="130" as="geometry" />
+          <mxGeometry x="600" y="50" width="210" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
