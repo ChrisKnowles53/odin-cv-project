@@ -69,18 +69,19 @@ function App() {
           <WorkExperience section="Work Experience" />
         </div>
         <div className="displaySection">
-          <h2>Section to display in a format that i like</h2>
           <div className="displayGeneralInformation">
             <h2>General Information</h2>
             <p className="generalDetails">
-              {savedFirstName} {savedSurname} {savedEmail} {savedPhoneNumber}
+              {savedFirstName} {savedSurname}
+              <br /> {savedEmail}
+              <br /> {savedPhoneNumber}
             </p>
           </div>
           <div className="displayEducation">
             <h2>Education</h2>
             <p className="educationDetails">
-              {savedSchoolName} {savedSubjectStudied}
-              {savedGraduationDate}
+              {savedSchoolName} {savedGraduationDate} <br />
+              {savedSubjectStudied}
             </p>
           </div>
           <div className="displayWorkExperience">

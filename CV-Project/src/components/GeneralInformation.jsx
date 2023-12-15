@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import InputField from "./Input";
-import Button from "./Button";
 
 export default function GeneralInformation({
   section,
@@ -22,7 +20,7 @@ export default function GeneralInformation({
       <br />
       <InputField name={surname} setName={setSurname} label="Surname" />
       <br />
-      <InputField name={email} setName={setEmail} label="email" />
+      <InputField name={email} setName={setEmail} label="Email" />
       <br />
       <InputField
         name={phoneNumber}
