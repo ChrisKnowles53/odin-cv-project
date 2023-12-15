@@ -3,7 +3,7 @@
 import { useState } from "react";
 import InputField from "./Input";
 import Button from "./Button";
-import DateInputField from "../DateInput";
+import DateInputField from "./DateInput";
 
 export default function Education({
   section,

@@ -26,6 +26,24 @@ function App() {
   const [savedSubjectStudied, setSavedSubjectStudied] = useState("");
   const [savedGraduationDate, setSavedGraduationDate] = useState("");
 
+  const [workExperience, setWorkExperience] = useState({
+    companyName: "",
+    position: "",
+    title: "",
+    mainResponsibilities: "",
+    dateFrom: "",
+    dateTo: "",
+  });
+
+  const [savedWorkExperience, setSavedWorkExperience] = useState({
+    companyName: "",
+    position: "",
+    title: "",
+    mainResponsibilities: "",
+    dateFrom: "",
+    dateTo: "",
+  });
+
   const handleButtonClick = (actionType) => {
     if (actionType == "save") {
       handleSave();
@@ -42,6 +60,9 @@ function App() {
     if (schoolName !== "") setSavedSchoolName(schoolName);
     if (subjectStudied !== "") setSavedSubjectStudied(subjectStudied);
     if (graduationDate !== "") setSavedGraduationDate(graduationDate);
+    if (Object.values(workExperience).some((value) => value.trim() !== "")) {
+      setSavedWorkExperience(workExperience);
+    }
 
     if (
       surname !== "" ||
@@ -59,12 +80,24 @@ function App() {
       setSubjectStudied("");
       setGraduationDate("");
     }
+    if (workExperience !== "") {
+      setWorkExperience({
+        companyName: "",
+        position: "",
+        title: "",
+        mainResponsibilities: "",
+        dateFrom: "",
+        dateTo: "",
+      });
+    }
   };
 
   const handleEdit = () => {
     console.log("edit button clicked");
   };
 
+  const { companyName, position, title, mainResponsibilities } =
+    savedWorkExperience;
   return (
     <div className="mainContainer">
       <h1>CJK CV Webpage</h1>
@@ -95,7 +128,11 @@ function App() {
             setGraduationDate={setGraduationDate}
           />
           <hr />
-          <WorkExperience section="Work Experience" />
+          <WorkExperience
+            section="Work Experience"
+            workExperience={workExperience}
+            setWorkExperience={setWorkExperience}
+          />
         </div>
         <div className="displaySection">
           <div className="displayGeneralInformation">
@@ -115,7 +152,12 @@ function App() {
           </div>
           <div className="displayWorkExperience">
             <h2>Work Experience</h2>
-            <p className="workExperienceDetails"></p>
+            <p className="workExperienceDetails">
+              Company: {companyName} <br />
+              Position: {position} <br />
+              Title: {title} <br />
+              Main Responsibilities: {mainResponsibilities} <br />
+            </p>
           </div>
         </div>
       </div>

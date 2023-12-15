@@ -1,16 +1,14 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+// import { useState } from "react";
 import InputField from "./Input";
-import DateInputField from "../DateInput";
+import DateInputField from "./DateInput";
 import React from "react";
 
-export default function WorkExperience({ section }) {
-  const [formData, setFormData] = useState({
-    companyName: "",
-    position: "",
-    title: "",
-    mainResponsibilities: "",
-  });
+export default function WorkExperience({
+  section,
+  workExperience,
+  setWorkExperience,
+}) {
   const inputFields = [
     { key: "companyName", label: "Company Name" },
     { key: "position", label: "Position" },
@@ -19,7 +17,7 @@ export default function WorkExperience({ section }) {
   ];
 
   const handleInputChange = (key, value) => {
-    setFormData((prevFormData) => ({
+    setWorkExperience((prevFormData) => ({
       ...prevFormData,
       [key]: value,
     }));
@@ -31,8 +29,9 @@ export default function WorkExperience({ section }) {
       {inputFields.map((field) => (
         <React.Fragment key={field.key}>
           <InputField
-            name={formData[field.key]}
+            name={workExperience[field.key]}
             label={field.label}
+            setName={(value) => handleInputChange(field.key, value)}
             onChange={(event) =>
               handleInputChange(field.key, event.target.value)
             }
