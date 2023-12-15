@@ -26,6 +26,14 @@ function App() {
   const [savedSubjectStudied, setSavedSubjectStudied] = useState("");
   const [savedGraduationDate, setSavedGraduationDate] = useState("");
 
+  const handleButtonClick = (actionType) => {
+    if (actionType == "save") {
+      handleSave();
+    } else if (actionType === "edit") {
+      handleEdit();
+    }
+  };
+
   const handleSave = () => {
     setSavedFirstName(firstName);
     setSavedSurname(surname);
@@ -36,11 +44,15 @@ function App() {
     setSavedGraduationDate(graduationDate);
   };
 
+  const handleEdit = () => {
+    console.log("edit button clicked");
+  };
+
   return (
     <div className="mainContainer">
       <h1>CJK CV Webpage</h1>
-      <Button text="Save" handleSave={handleSave} />
-      <Button text="Edit" />
+      <Button text="Save" onClick={handleButtonClick} actionType="save" />
+      <Button text="Edit" onClick={handleButtonClick} actionType="edit" />
       <div className="content">
         <div className="inputSection">
           <GeneralInformation
