@@ -26,7 +26,7 @@ h2 {
 }
 
 .inputSection {
-  flex: 1;
+  /* flex: 1; */
   text-align: right;
   margin-right: 20px;
 }
@@ -49,4 +49,15 @@ h2 {
   color: var(--white);
   margin: 3px;
   width: 50px;
+}
+
+.generalDetails,
+.educationDetails,
+.workExperienceDetails {
+  display: flex;
+  align-self: left;
+}
+
+p {
+  text-align: left;
 }

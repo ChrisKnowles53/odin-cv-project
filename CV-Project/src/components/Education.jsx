@@ -9,7 +9,7 @@ export default function Education({
   section,
   schoolName,
   subjectStudied,
-  graduationDate,
+  inputDate,
   setSchoolName,
   setSubjectStudied,
   setGraduationDate,
@@ -30,7 +30,7 @@ export default function Education({
       />
       <br />
       <DateInputField
-        name={graduationDate}
+        name={inputDate}
         setName={setGraduationDate}
         label="Graduation Date"
       />

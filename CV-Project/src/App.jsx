@@ -43,8 +43,14 @@ function App() {
     dateTo: "",
   });
 
-  const { companyName, position, title, mainResponsibilities } =
-    savedWorkExperience;
+  const {
+    companyName,
+    position,
+    title,
+    mainResponsibilities,
+    dateFrom,
+    dateTo,
+  } = savedWorkExperience;
 
   const handleButtonClick = (actionType) => {
     if (actionType == "save") {
@@ -129,7 +135,7 @@ function App() {
             section="Education"
             schoolName={schoolName}
             subjectStudied={subjectStudied}
-            graduationDate={graduationDate}
+            inputDate={graduationDate}
             setSchoolName={setSchoolName}
             setSubjectStudied={setSubjectStudied}
             setGraduationDate={setGraduationDate}
@@ -166,6 +172,8 @@ function App() {
               Position: {position} <br />
               Title: {title} <br />
               Main Responsibilities: {mainResponsibilities} <br />
+              Started: {dateFrom} <br />
+              Finished: {dateTo}
             </p>
           </div>
         </div>

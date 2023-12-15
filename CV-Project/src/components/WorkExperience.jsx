@@ -22,6 +22,12 @@ export default function WorkExperience({
       [key]: value,
     }));
   };
+  const handleDateChange = (key, value) => {
+    setWorkExperience((prevFormData) => ({
+      ...prevFormData,
+      [key]: value,
+    }));
+  };
 
   return (
     <div className={section}>
@@ -40,8 +46,16 @@ export default function WorkExperience({
         </React.Fragment>
       ))}
 
-      <DateInputField label="Date from" />
-      <DateInputField label="Date to" />
+      <DateInputField
+        label="Date from"
+        inputDate={workExperience.dateFrom}
+        setName={(value) => handleDateChange("dateFrom", value)}
+      />
+      <DateInputField
+        label="Date to"
+        inputDate={workExperience.dateTo}
+        setName={(value) => handleDateChange("dateTo", value)}
+      />
     </div>
   );
 }
