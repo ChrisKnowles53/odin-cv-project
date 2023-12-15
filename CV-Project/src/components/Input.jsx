@@ -8,7 +8,8 @@ export default function InputField({ name, setName, label }) {
       </label>
       <textarea
         className="input"
-        placeholder={name}
+        placeholder={label}
+        value={name}
         onChange={(event) => setName(event.target.value)}
       ></textarea>
     </>

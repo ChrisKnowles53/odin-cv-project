@@ -8,19 +8,19 @@ import Button from "./components/Button";
 // add a function to reset the whole form
 
 function App() {
-  const [firstName, setFirstName] = useState("Enter your first name");
-  const [surname, setSurname] = useState("Enter your surname");
-  const [email, setEmail] = useState("Enter your email");
-  const [phoneNumber, setPhoneNumber] = useState("Enter phone number");
+  const [firstName, setFirstName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const [savedFirstName, setSavedFirstName] = useState("");
   const [savedSurname, setSavedSurname] = useState("");
   const [savedEmail, setSavedEmail] = useState("");
   const [savedPhoneNumber, setSavedPhoneNumber] = useState("");
 
-  const [schoolName, setSchoolName] = useState("School Name");
-  const [subjectStudied, setSubjectStudied] = useState("Subject Studied");
-  const [graduationDate, setGraduationDate] = useState("Graduation Date");
+  const [schoolName, setSchoolName] = useState("");
+  const [subjectStudied, setSubjectStudied] = useState("");
+  const [graduationDate, setGraduationDate] = useState("");
 
   const [savedSchoolName, setSavedSchoolName] = useState("");
   const [savedSubjectStudied, setSavedSubjectStudied] = useState("");
@@ -35,13 +35,30 @@ function App() {
   };
 
   const handleSave = () => {
-    setSavedFirstName(firstName);
-    setSavedSurname(surname);
-    setSavedEmail(email);
-    setSavedPhoneNumber(phoneNumber);
-    setSavedSchoolName(schoolName);
-    setSavedSubjectStudied(subjectStudied);
-    setSavedGraduationDate(graduationDate);
+    if (firstName !== "") setSavedFirstName(firstName);
+    if (surname !== "") setSavedSurname(surname);
+    if (email !== "") setSavedEmail(email);
+    if (phoneNumber !== "") setSavedPhoneNumber(phoneNumber);
+    if (schoolName !== "") setSavedSchoolName(schoolName);
+    if (subjectStudied !== "") setSavedSubjectStudied(subjectStudied);
+    if (graduationDate !== "") setSavedGraduationDate(graduationDate);
+
+    if (
+      surname !== "" ||
+      surname !== "" ||
+      email !== "" ||
+      phoneNumber !== ""
+    ) {
+      setFirstName("");
+      setSurname("");
+      setEmail("");
+      setPhoneNumber("");
+    }
+    if (schoolName !== "" || subjectStudied !== "" || graduationDate !== "") {
+      setSchoolName("");
+      setSubjectStudied("");
+      setGraduationDate("");
+    }
   };
 
   const handleEdit = () => {

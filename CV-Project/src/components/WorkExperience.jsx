@@ -6,10 +6,10 @@ import React from "react";
 
 export default function WorkExperience({ section }) {
   const [formData, setFormData] = useState({
-    companyName: "Enter company name",
-    position: "Enter position",
-    title: "Enter title",
-    mainResponsibilities: "Enter main responsibilities",
+    companyName: "",
+    position: "",
+    title: "",
+    mainResponsibilities: "",
   });
   const inputFields = [
     { key: "companyName", label: "Company Name" },
@@ -42,7 +42,6 @@ export default function WorkExperience({ section }) {
       ))}
 
       <DateInputField label="Date from" />
-      <br />
       <DateInputField label="Date to" />
     </div>
   );
