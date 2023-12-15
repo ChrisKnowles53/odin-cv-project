@@ -5,7 +5,6 @@ import "./App.css";
 import WorkExperience from "./components/WorkExperience";
 import { useState } from "react";
 import Button from "./components/Button";
-// add a function to reset the whole form
 
 function App() {
   const [firstName, setFirstName] = useState("");
@@ -44,6 +43,9 @@ function App() {
     dateTo: "",
   });
 
+  const { companyName, position, title, mainResponsibilities } =
+    savedWorkExperience;
+
   const handleButtonClick = (actionType) => {
     if (actionType == "save") {
       handleSave();
@@ -65,7 +67,7 @@ function App() {
     }
 
     if (
-      surname !== "" ||
+      firstName !== "" ||
       surname !== "" ||
       email !== "" ||
       phoneNumber !== ""
@@ -93,11 +95,16 @@ function App() {
   };
 
   const handleEdit = () => {
-    console.log("edit button clicked");
+    setFirstName(savedFirstName);
+    setSurname(savedSurname);
+    setEmail(savedEmail);
+    setPhoneNumber(savedPhoneNumber);
+    setSchoolName(savedSchoolName);
+    setSubjectStudied(savedSubjectStudied);
+    setGraduationDate(savedGraduationDate);
+    setWorkExperience(savedWorkExperience);
   };
 
-  const { companyName, position, title, mainResponsibilities } =
-    savedWorkExperience;
   return (
     <div className="mainContainer">
       <h1>CJK CV Webpage</h1>
@@ -146,8 +153,10 @@ function App() {
           <div className="displayEducation">
             <h2>Education</h2>
             <p className="educationDetails">
-              {savedSchoolName} {savedGraduationDate} <br />
-              {savedSubjectStudied}
+              School: {savedSchoolName}
+              <br />
+              Graduated: {savedGraduationDate} <br />
+              Subject: {savedSubjectStudied}
             </p>
           </div>
           <div className="displayWorkExperience">
