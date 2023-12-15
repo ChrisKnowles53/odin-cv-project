@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-export default function DateInputField({ label, graduationDate, setName }) {
+export default function DateInputField({ label, inputDate, setName }) {
   return (
     <>
       <label className="inputLabel" htmlFor="html">
@@ -9,10 +9,10 @@ export default function DateInputField({ label, graduationDate, setName }) {
       <input
         className="input"
         type="date"
-        value={graduationDate}
+        value={inputDate}
         onChange={(event) => setName(event.target.value)}
       ></input>
-      <h2>{graduationDate}</h2>
+      <h2>{inputDate}</h2>
     </>
   );
 }

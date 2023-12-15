@@ -113,9 +113,13 @@ function App() {
 
   return (
     <div className="mainContainer">
-      <h1>CJK CV Webpage</h1>
-      <Button text="Save" onClick={handleButtonClick} actionType="save" />
-      <Button text="Edit" onClick={handleButtonClick} actionType="edit" />
+      <div className="stickyHeader">
+        <h1>CJK CV Builder</h1>
+        <div className="buttons">
+          <Button text="Save" onClick={handleButtonClick} actionType="save" />
+          <Button text="Edit" onClick={handleButtonClick} actionType="edit" />
+        </div>
+      </div>
       <div className="content">
         <div className="inputSection">
           <GeneralInformation
@@ -155,6 +159,7 @@ function App() {
               <br /> {savedEmail}
               <br /> {savedPhoneNumber}
             </p>
+            <hr />
           </div>
           <div className="displayEducation">
             <h2>Education</h2>
@@ -164,6 +169,7 @@ function App() {
               Graduated: {savedGraduationDate} <br />
               Subject: {savedSubjectStudied}
             </p>
+            <hr />
           </div>
           <div className="displayWorkExperience">
             <h2>Work Experience</h2>
